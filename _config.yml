@@ -30,3 +30,52 @@ exclude:
 sass:
   sass_dir: css
   style: compressed
+
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://beta.franceinsoumise06.fr'
+  media: 'img/uploads'
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    _posts/blog:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "blog"
+      - name: "dossier"
+        field:
+          element: text
+          label: "Dossier rattaché"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Apples"
+              value: "apples"
+            - name: "Bananas"
+              value: "bananas"
+    _posts/dossier:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "dossier"
+      - name: "dossier"
+        field:
+          element: text
+          label: "Nom simplifié"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Apples"
+              value: "apples"
+            - name: "Bananas"
+              value: "bananas"
