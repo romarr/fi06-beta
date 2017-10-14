@@ -4,8 +4,9 @@ resume: "Tous nos débats, rencontres et questions avec les députés de la Fran
 category: dossier
 date: 2017-10-14
 date-creation: 2017-10-10
-tags: débat national
-layout: post
+tags: ["débats", "national"]
+layout: dossier
 author: FI06
+dossier: national
 ---
 

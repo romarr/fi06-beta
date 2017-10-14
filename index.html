@@ -21,21 +21,10 @@ weight: 1
     <article class="row">
         <div class="col-md-4">
             {% if post.img %}
-                <a class="thumbnail" href="{{ post.url }}"><img class="img-responsive" src="/img/{{ post.img }}" /></a>
+            <a class="thumbnail" href="{{ post.url }}"><img class="img-responsive" src="/img/{{ post.img }}" /></a>
             {% else %}
-                {% assign foundImage = 0 %}
-                {% assign images= post.content | split:"<img " %}
-                {% for image in images %}
-                    {% if image contains 'src' %}
-                        {% if foundImage == 0 %}
-                            {% assign html = image | split:"/>" | first %}
-                            <a class="thumbnail" href="{{ post.url }}"><img class="img-responsive" {{ html }} /></a>
-                            {% assign foundImage = 1 %}
-                            {% break %}
-                        {% endif %}
-                    {% endif %}
-                {% endfor %}
-                {% endif %}
+            <a class="thumbnail" href="{{ post.url }}"><img class="img-responsive" src="/img/aec.jpg" /></a>
+            {%endif%}
         </div>
         <div class="col-md-8">
             <span class="label label-primary">{{ post.date | date: "%b %-d, %Y" }}</span>

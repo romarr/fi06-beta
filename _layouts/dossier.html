@@ -25,13 +25,12 @@ layout: default
         {% for post in site.posts %}
         {% if post.category == "blog" %}
         {% if post.dossier == page.dossier %}
-                  <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+            <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
                 <li>
-                <span class="label label-primary">{{ post.date | date_to_long_string }}</span>
-                        {{ post.title }}
+                    <span class="label label-primary">{{ post.date | date_to_long_string }}</span>
+                    {{ post.title }}
                 </li>
-                </a>
-
+            </a>
         {%endif%}
         {%endif%}
         {%endfor%}

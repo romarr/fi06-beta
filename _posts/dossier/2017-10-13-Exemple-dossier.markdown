@@ -4,7 +4,7 @@ resume: "Dossier 1 est un exemple de dossier pour présenter les travaux et déb
 category: dossier
 date: 2017-10-13
 date-creation: 2017-10-10
-tags: exemple, exemple 2, exemple 3
+tags: ["exemple 1", "exemple 2"]
 layout: dossier
 author: Groupe 1
 dossier: dossier1

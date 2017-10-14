@@ -12,8 +12,8 @@ url: http://franceinsoumise06.fr
 markdown: kramdown
 # theme: minima
 
-twitter_user: fi_antibes
-facebook_page: groups/2068851440008579/
+#twitter_user: fi_antibes
+#facebook_page: groups/2068851440008579/
 #github_user: romarr
 
 gems:
