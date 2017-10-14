@@ -7,7 +7,7 @@ timezone: Europe/Paris
 email: admin@franceinoumise06.fr
 privacy: "Tous les services affichés sur ce site sont libres et auto-hebergés à l'exception des liens vers les réseaux sociaux."
 description: "Discussion et agenda des groupes locaux de la France Insoumise des Alpes-Maritimes"
-baseurl: ''
+baseurl: 'fi06-beta'
 url: http://franceinsoumise06.fr
 markdown: kramdown
 # theme: minima
