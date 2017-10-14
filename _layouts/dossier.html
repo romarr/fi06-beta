@@ -17,7 +17,7 @@ layout: default
     <div class="col-md-5">
         <span class="label label-default">{{ page.date | date: "%b %-d, %Y" }}</span>
         <h6><i class="fa fa-user"></i> {{ page.author }}</h6>
-        <h6><i class="fa fa-tag"></i> {% for tag in page.tags %} <a href="{{ "/tags.html" | prepend: site.baseurl }}#{{ tag }}">{{ tag }}</a> {% endfor %}</h6>
+        <h6><i class="fa fa-tag"></i> {% for tag in page.tags %} <a href="/tags.html#{{ tag }}">{{ tag }}</a> {% endfor %}</h6>
     </div>
     <div class="col-md-12">
         <h3>Articles attachés à ce dossier</h3>
