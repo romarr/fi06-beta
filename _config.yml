@@ -1,0 +1,32 @@
+---
+encoding: "utf-8"
+title: France Insoumise 06
+subtitle: Groupes des Alpes-Maritimes
+timezone: Europe/Paris
+
+email: admin@franceinoumise06.fr
+privacy: "Tous les services affichés sur ce site sont libres et auto-hebergés à l'exception des liens vers les réseaux sociaux."
+description: "Discussion et agenda des groupes locaux de la France Insoumise des Alpes-Maritimes"
+baseurl: ''
+url: http://franceinsoumise06.fr
+markdown: kramdown
+# theme: minima
+
+twitter_user: fi_antibes
+facebook_page: groups/2068851440008579/
+#github_user: romarr
+
+gems:
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-paginate
+exclude:
+- Gemfile
+- Gemfile.lock
+- Dockerfile
+- Dockerfile.dev
+- nginx.conf
+
+sass:
+  sass_dir: css
+  style: compressed

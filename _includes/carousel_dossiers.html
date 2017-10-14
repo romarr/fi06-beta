@@ -1,0 +1,44 @@
+<div id="carousel-dossiers" class="carousel slide" data-ride="carousel">
+    {% assign count = 0 %}
+    <div class="carousel-inner panel panel-default panel-featured" role="listbox">
+        {% for post in site.posts %}
+        {% if post.category == "dossier" %}
+        {% assign count = count | plus: 1 %}
+        {% if count == 1 %}
+        <div class="item active">
+        {% else %}
+        <div class="item">
+        {% endif %}
+        <div class="col-md-12">
+          <div class="row">
+        
+            <div class="col-md-4">
+              <p><span class="label label-info"><i class="fa fa-pencil"></i>Dernière modif.</span><small> {{ post.date | date: "%b %-d, %Y" }}</small></p>
+              {% if post.img %}
+              <a href="{{ post.url }}"><img class="img-responsive img-rounded" src="/img/{{ post.img }}" /></a>
+              {% else %}
+              <a href="{{ post.url }}"><img class="img-responsive img-rounded" src="/img/aec.jpg" /></a>
+              {% endif %}
+            </div>
+            <div class="col-md-8">
+                <h4>{{post.title}}</h4>
+                <p>{{post.resume}}</p>
+                <p class="pull-right">
+                  <a href="{{post.url}}" class="btn btn-info" role="button">
+                    <i class="fa fa-folder-open-o fa-lg"></i> Lire le dossier</a>
+                </p>
+            </div>
+        
+          </div>
+        </div>
+        </div>
+        {%endif%}
+        {%endfor%}
+        <div class="pull-right btn-carousel">
+            <div class="btn-group" role="group" aria-label="...">
+                <button class="btn btn-default btn-xs" href="#carousel-dossiers" role="button" data-slide="prev" type="button"><i class="fa fa-chevron-left"></i></button>
+                <button class="btn btn-default btn-xs" href="#carousel-dossiers" role="button" data-slide="next" type="button"><i class="fa fa-chevron-right"></i></button>
+              </div>
+          </div> 
+    </div>
+  </div>

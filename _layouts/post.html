@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<header class="post-header">
+    <h1>{{ page.title }}</h1>
+</header>
+<div class="row">
+    <div class="col-md-7">
+        {% if page.img %}
+        <img class="img-responsive img-thumbnail" src="/img/{{ page.img }}"/>
+        {% else %}
+        <img class="img-responsive img-thumbnail" src="/img/aec.jpg"/>
+        {% endif %}
+    </div>
+
+    <div class="col-md-5">
+        <span class="label label-default">{{ page.date | date: "%b %-d, %Y" }}</span>
+        <h6><i class="fa fa-user"></i> {{ page.author }}</h6>
+        <h6><i class="fa fa-tag"></i> {% for tag in page.tags %} <a href="{{ "/tags.html" | prepend: site.baseurl }}#{{ tag }}">{{ tag }}</a> {% endfor %}</h6>
+    </div>
+    <div class="col-md-12">
+        <hr>
+        <article>
+            {{ content }}
+        </article>
+        <div class="share-footer pull-right">
+            Partager sur
+            <a class="btn btn-primary btn-sm" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}"
+                rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
+            <a class="btn btn-primary btn-sm" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank"
+                title="Share on Facebook"><i class="fa fa-facebook"></i></a>
+        </div>
+    </div>
+</div>

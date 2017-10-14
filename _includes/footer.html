@@ -1,0 +1,53 @@
+<footer id="site-footer">
+    <div class="container">
+        <div class="row text-muted text-center">
+            <div class="col-md-4">
+                <h3>Vie privée</h3>
+                <p>{{ site.privacy }}</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Sur les réseaux</h3>
+                {% if site.twitter_user %}
+                <a class="btn btn-primary" href="https://twitter.com/{{ site.twitter_user }}"><i class="fa fa-twitter fa-lg"></i></a>
+                {% endif %}
+                {% if site.facebook_page %}
+                <a class="btn btn-primary" href="https://facebook.com/{{ site.facebook_page }}"><i class="fa fa-facebook fa-lg"></i></a>
+                {% endif %}
+                {% if site.github_user %}
+                <a class="btn btn-primary" href="https://github.com/{{ site.github_user }}"><i class="fa fa-github fa-lg"></i></a>
+                {% endif %}
+                <a class="btn btn-primary" href="&#109;ail&#116;&#111;&#58;fian%74&#105;b%6&#53;s%&#52;0&#102;ree&#46;fr"><i class="fa fa-envelope fa-lg"></i></a>
+            </div>
+            <div class="col-md-4">
+                <h3>A propos</h3>
+                <p>{{ site.description }}</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-muted text-center">
+            <pre class="bg-footer">La France Insoumise - Alpes-Maritimes 7ème Circonscription | Conçu avec <a href="http://jekyllrb.com">Jekyll</a> et Bootstrap</pre>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ " /js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+    <script src="{{ " /js/custom.js " | prepend: site.baseurl }}"></script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  // tracker methods like "setCustomDimension" should be called before "trackPageView"
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.romsys.ovh/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '4']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+
+</footer>

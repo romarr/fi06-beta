@@ -1,0 +1,21 @@
+<div class="row">
+    <h2>La Circonscription</h2>
+    <ul class="nav nav-pills nav-stacked">
+        {% if page.facebook %}<li><a href="{{ page.facebook }}"><span class="label label-primary"><i class="fa fa-lg fa-facebook"></i></span> Page Facebook</a></li>{%endif%}
+        <li><a href="https://legislatives2017.lafranceinsoumise.fr/departement/6/circonscription/{{ page.id }}"><span class="label label-primary"><i class="fa fa-lg fa-bullhorn"></i></span> Groupe d'appui</a></li>
+        {% if page.blog %}<li><a href="{{ page.blog }}"><span class="label label-primary"><i class="fa fa-lg fa-user"></i></span> Blog candidat</a></li>{%endif%}
+        {% if page.twitter %}<li><a href="{{ page.twitter }}"><span class="label label-primary"><i class="fa fa-lg fa-twitter"></i></span> Compte twitter</a></li>{%endif%}
+    </ul>
+
+    <hr class="style1">
+    <h2>Liens utiles</h2>
+    <ul class="nav nav-pills nav-stacked">
+        <li><a href="https://laec.fr/"><span class="label label-primary"><i class="fa fa-lg fa-book"></i></span> L'avenir en commun</a></li>
+        <li><a href="http://lafranceinsoumise.fr/"><span class="label label-primary"><i class="fa fa-lg fa-thumbs-up"></i></span> La France Insoumise</a></li>
+        <li><a href="http://f-i.jlm2017.fr/fiantibes/fiantibes"><span class="label label-primary"><i class="fa fa-lg fa-comments"></i></span> Le groupe d'appui</a></li>
+    </ul>
+
+    <hr class="style1">
+    <h2>Affiche</h2>
+    <img class="img-responsive" src="http://placehold.it/300x400">
+</div>
