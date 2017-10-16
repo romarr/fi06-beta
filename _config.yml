@@ -1,0 +1,110 @@
+---
+encoding: "utf-8"
+title: France Insoumise 06
+subtitle: Groupes des Alpes-Maritimes
+timezone: Europe/Paris
+
+email: admin@franceinoumise06.fr
+privacy: "Tous les services affichés sur ce site sont libres et auto-hebergés à l'exception des liens vers les réseaux sociaux."
+description: "Discussion et agenda des groupes locaux de la France Insoumise des Alpes-Maritimes"
+baseurl: ''
+url: http://franceinsoumise06.fr
+markdown: kramdown
+# theme: minima
+
+#twitter_user: fi_antibes
+#facebook_page: groups/2068851440008579/
+#github_user: romarr
+
+gems:
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-paginate
+exclude:
+- Gemfile
+- Gemfile.lock
+- Dockerfile
+- Dockerfile.dev
+- nginx.conf
+
+sass:
+  sass_dir: css
+  style: compressed
+
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://beta.franceinsoumise06.fr/'
+  media: 'img/uploads'
+  ignore:
+    - /_config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    _posts/blog:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Titre"
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "category"
+        field:
+          element: "hidden"
+          value: "blog"
+      - name: "date"
+        field:
+          element: "text"
+          value: CURRENT_DATETIME
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          alterable: true
+      - name: "author"
+        field:
+          element: "text"
+          label: "Auteur"
+      - name: "dossier"
+        field:
+          element: "multiselect"
+          label: "Dossier attaché"
+          options: 'http://beta.franceinsoumise06.fr/dossiers.jsonp'
+
+    _posts/dossier:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Titre"
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "dossier"
+      - name: "category"
+        field:
+          element: "hidden"
+          value: "dossier"
+      - name: "date"
+        field:
+          element: "text"
+          value: CURRENT_DATETIME
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          alterable: true
+      - name: "author"
+        field:
+          element: "text"
+          label: "Auteur"
+      - name: "dossier"
+        field:
+          element: "text"
+          label: "Identifiant dossier"
+          placeholder: "Ex: loi_travail"
+      - name: "resume"
+        field:
+          element: "text"
+          label: "Résumé"
+          placeholder: "Ex: Décryptage de la loi travail XXL"

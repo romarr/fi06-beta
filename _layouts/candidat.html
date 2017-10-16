@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+
+{% include header.html %}
+
+<section class="page-content">
+    <div class="container main-container">
+        <div class="row">
+            <div class="col-md-8">
+                <header class="post-header">
+                    <h1 class="post-title">{{ page.title }} <small>des Alpes-Maritimes</small></h1>
+                </header>
+                <h3>{{ page.candidats }} <small>candidats de la {{ page.title }} des Alpes-Maritimes.</small></h3>
+                <div class="row">
+                <div class="col-md-6">
+                    <img class="img-responsive img-thumbnail" src="/img/candidats/{{page.id}}-titulaire.jpg">
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive img-thumbnail" src="/img/candidats/{{page.id}}-suppleant.jpg">
+                </div>
+                <div class="col-md-12">
+                    <h3>Circonscription</h3>
+                    <img class="img-responsive img-thumbnail" src="http://placehold.it/800x300">
+                </div>
+                </div>
+            </div>
+            <aside class="col-md-3 col-md-offset-1">
+                {% include aside_var.html %}
+            </aside>
+        </div>
+    </div>
+</section>
+{% include footer.html %}
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+---
+---
+callback([
+{% for post in site.posts %}
+{% if post.category == "dossier" %}
+  {
+    "name": "{{post.dossier}}",
+    "value": "{{post.dossier}}"
+  }{% unless forloop.last %},{% endunless%}
+{%endif%}
+{% endfor %}
+])

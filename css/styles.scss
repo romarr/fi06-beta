@@ -1,0 +1,105 @@
+---
+---
+/*!
+ * Thème Bootswatch (United) personalisé aux couleurs de la France Insoumise
+ */
+@import 'bootstrap';
+@import 'fontawesome';
+@import 'tags';
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style:  normal;
+  font-weight: 400;
+  src: url(../fonts/Montserrat.woff2) format('woff2');
+}
+
+.top-header{
+    background: url(/img/phi_large.png) left center no-repeat, url(/img/bg-all.jpg) center center no-repeat;
+    height: 200px;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    background-size: contain, cover;
+}
+
+.site-header {
+    height: 51px;
+}
+
+hr.style1 {
+    width: 70%;
+    color: rgb(0, 152, 182);
+    background-color: rgb(0, 152, 182);
+    height: 2px;
+}
+
+hr.style2 {
+    width: 70%;
+    color: rgb(201, 70, 44);
+    background-color: rgb(201, 70, 44);
+    height: 1px;
+}
+#site-footer {
+    color: white;
+    background-color: rgb(0, 152, 182);
+}
+#site-footer p {
+    color: white;
+}
+#site-footer h3 {
+    color: white;
+}
+
+.bg-footer {
+    color: #777;
+    background-color: #222222;
+}
+.main-container {
+    background-color: white;
+    max-width: 1140px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+.page-content {
+    background-color: $gray-lighter;
+    background-image: url('/img/subtle.png');
+    background-attachment: fixed;
+}
+
+aside {
+    padding-top: 10px;
+}
+
+.header-brand {
+	display: inherit;
+	margin: 0;
+	padding: 30px 0 0 0;
+	text-align: center;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	font-size: 5em;
+	font-weight: 700;
+	line-height: normal;
+	color: #fff;
+}
+
+.header-brandxs {
+	font-size: 2.5em;
+}
+.header-subbrand {
+	font-size: 2em;
+}
+
+.panel-featured {
+    height: 180px;
+}
+.btn-carousel {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+article img {
+    @include img-responsive();
+}

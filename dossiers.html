@@ -1,0 +1,23 @@
+---
+title: Dossiers & débats
+layout: page
+navtitle: <span class="fa fa-book"></span> Dossiers
+weight: 5
+---
+
+<div class="row">
+  {% for post in site.posts %}
+  {% if post.category == "dossier" %}
+  <div class="col-sm-12 col-md-6">
+    <div class="thumbnail">
+      <h3 class="text-center">{{post.title}}</h3>
+      <img class="img-rounded" src="http://placehold.it/400x150" alt="...">
+      <div class="caption">
+        <p>{{post.resume}}</p>
+        <p class="text-center"><a href="{{post.url}}" class="btn btn-info" role="button"><i class="fa fa-folder-open-o fa-lg"></i> Lire le dossier</a></p>
+      </div>
+    </div>
+  </div>
+  {%endif%}
+  {%endfor%}
+</div>

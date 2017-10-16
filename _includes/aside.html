@@ -1,0 +1,38 @@
+<div class="row">
+    <h3>Newsletter</h3>
+    
+    <h3>Dernières publications</h3>
+    <ul class="nav nav-pills nav-stacked">
+        {% for post in site.posts limit:5 %}
+        {% if post.category == "blog" %}
+        {% if post.url %}
+        <li><a href="{{ post.url }}"><span class="label label-primary">{{ post.date | date: "%-d %b" }}</span> {{ post.title }}</a></li>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+    <hr class="style1">
+    <h3>Liens utiles</h3>
+    <ul class="nav nav-pills nav-stacked">
+        <li><a href="https://laec.fr/"><span class="label label-primary"><i class="fa fa-lg fa-book"></i></span> L'avenir en commun</a></li>
+        <li><a href="http://lafranceinsoumise.fr/"><span class="label label-primary"><i class="fa fa-lg fa-thumbs-up"></i></span> La France Insoumise</a></li>
+    </ul>
+
+    <h3>Doerniers dossiers</h3>
+    <ul class="nav nav-pills nav-stacked">
+        {% assign count=0 %}            
+        {% assign dossiers = site.posts | sort: 'date' | reverse %}
+        {% for post in dossiers %}
+        {% if post.category == "dossier" %}
+        {% if post.url %}
+        {% if count == 3 %}{%break%}
+        {% assign count = count | plus: 1 %}
+        {%endif%}
+        <li><a href="{{ post.url }}"> {{ post.title }}</a></li>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </ul>
+    
+</div>

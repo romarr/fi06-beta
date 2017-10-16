@@ -1,0 +1,41 @@
+<section class="top-header{% if page.layout == "candidat" %} top-all{%endif%}">
+    <h1 class="header-brand hidden-xs">France Insoumise</h1>
+    <h1 class="header-brand header-brandxs visible-xs">France Insoumise</h1>
+    <h4 class="header-brand header-subbrand">{{site.subtitle}}</h1>
+</section>
+<header class="site-header">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    {% assign pages = site.pages | sort:"weight" %}
+                    {% for page in pages %}
+                    {% if page.navtitle %}
+                    <li><a href="{{ page.url }}">{{ page.navtitle }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    {% if site.twitter_user %}
+                    <li><a href="https://twitter.com/{{ site.twitter_user }}"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    {% endif %}
+                    {% if site.facebook_page %}
+                    <li><a href="https://facebook.com/{{ site.facebook_page }}"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    {% endif %}
+                    <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss fa-lg"></i></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</header>
